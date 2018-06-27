@@ -1,0 +1,12 @@
+{
+  "rasa_nlu_data": {
+    "entity_synonyms": [],
+    "regex_features": [],
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "hey"
+      }
+    ]
+  }
+}

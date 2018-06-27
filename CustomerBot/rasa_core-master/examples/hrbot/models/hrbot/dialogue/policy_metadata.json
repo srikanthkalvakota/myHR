@@ -1,0 +1,17 @@
+{
+  "action_fingerprints": {
+    "hey": {
+      "slots": []
+    }
+  },
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ],
+  "max_histories": [
+    3,
+    5
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "rasa_core": "0.9.4"
+}

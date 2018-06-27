@@ -1,0 +1,19 @@
+action_factory: remote
+action_names:
+- utter_greet
+actions:
+- utter_greet
+config:
+  store_entities_as_slots: true
+entities:
+- names
+intents:
+- greet
+slots:
+  names:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_greet:
+  - text: hi
+topics: []

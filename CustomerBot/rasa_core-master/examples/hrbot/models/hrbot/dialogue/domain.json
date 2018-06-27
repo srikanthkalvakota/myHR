@@ -1,0 +1,10 @@
+{
+  "states": [
+    "intent_greet",
+    "entity_names",
+    "slot_names_0",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_utter_greet"
+  ]
+}

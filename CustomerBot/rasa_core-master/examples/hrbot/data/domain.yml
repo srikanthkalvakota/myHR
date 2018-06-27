@@ -1,0 +1,13 @@
+slots:
+  names:
+    type: text
+intents:
+  - greet
+entities:
+  - names
+action_factory: remote
+actions:
+  - utter_greet
+templates:
+  utter_greet:
+    - text: hi
