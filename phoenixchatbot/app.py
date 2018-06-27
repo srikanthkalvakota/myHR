@@ -14,10 +14,14 @@ def hello_world():
 
 @app.route('/test', methods=['GET', 'POST'])
 def test():
-	select = request.form.get('comp_select')
-	if select == "Recruiter": return(render_template('Recruiter.html', data1='Recruiter'))
-	elif select == "HR-Manager": return(render_template('HR-Manager.html', data1='HR-Manager'))
-	elif select == "LOB-Head": return(render_template('LOB-Head.html', data1='LOB-Head'))
+    select = request.form.get('comp_select')
+    print(select);
+    if select == "Recruiter":
+        return(render_template('Recruiter.html', data1='Recruiter'))
+    elif select == "HR-Manager":
+        return(render_template('HR-Manager.html', data1='HR-Manager'))
+    elif select == "LOB-Head":
+        return(render_template('LOB-Head.html', data1='LOB-Head'))
 	
 	
 get_random_response = lambda intent:random.choice(intent_response_dict[intent])
@@ -47,4 +51,4 @@ def chat():
 
 app.config["DEBUG"] = True
 if __name__ == "__main__":
-    app.run(port=8080)
+    app.run(host="DESKTOP-NJ1L93T",port=8080)
