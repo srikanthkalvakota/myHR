@@ -23,6 +23,7 @@ Message = function (arg) {
 
 
 function showBotMessage(msg){
+	console.log(msg);
         message = new Message({
              text: msg,
              message_side: 'left'
@@ -42,6 +43,7 @@ function showUserMessage(msg){
 }
 function sayToBot(text){
     document.getElementById("msg_input").placeholder = "Type your messages here..."
+	console.log(text);
     $.post("/chat",
             {
                 //csrfmiddlewaretoken:csrf,

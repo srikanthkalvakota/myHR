@@ -1,6 +1,5 @@
 {
   "rasa_nlu_data": {
-    "regex_features": [],
     "common_examples": [
       {
         "text": "hey",
@@ -23,40 +22,40 @@
         "intent": "greet"
       },
       {
-        "text": "i'm looking to order a router",
-        "intent": "order_product",
+        "text": "need report for the month of",
         "entities": [
           {
-            "entity": "product",
-            "end": 29,
-            "start": 23,
-            "value": "router"
-          }
-        ]
-      },
-      {
-        "text": "I want to order a router",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "product",
-            "end": 24,
-            "start": 18,
-            "value": "router"
-          }
-        ]
-      },
-      {
-        "text": "What are the types of router you have",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "product",
+            "entity": "month",
+            "start": 20,
             "end": 28,
-            "start": 22,
-            "value": "router"
+            "value": "month"
           }
-        ]
+        ],
+        "intent": "provide_month"
+      },
+      {
+        "text": "I want to get CCB open recs report",
+        "entities": [
+          {
+            "entity": "report",
+            "start": 23,
+            "end": 27,
+            "value": "recs"
+          }
+        ],
+        "intent": "provide_reports"
+      },
+      {
+        "text": "I want to approve rec id",
+        "entities": [
+          {
+            "entity": "approval",
+            "start": 10,
+            "end": 24,
+            "value": ""
+          }
+        ],
+        "intent": "approve_rec"
       },
       {
         "text": "yes",
@@ -69,24 +68,6 @@
       {
         "text": "yeah",
         "intent": "affirm"
-      },
-      {
-        "text": "show me all the 829 router",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "router",
-            "end": 19,
-            "start": 16,
-            "value": "829"
-          },
-          {
-            "entity": "product",
-            "end": 26,
-            "start": 20,
-            "value": "router"
-          }
-        ]
       },
       {
         "text": "goodbye",
@@ -121,40 +102,28 @@
         "intent": "affirm"
       },
       {
-        "text": "do you have any 829 router?",
-        "intent": "order_product",
+        "text": "I want to get CCB closed recs report",
         "entities": [
           {
-            "entity": "router",
-            "end": 19,
-            "start": 16,
-            "value": "829"
-          },
-          {
-            "entity": "product",
-            "end": 26,
-            "start": 20,
-            "value": "router"
+            "entity": "closed reports",
+            "start": 18,
+            "end": 36,
+            "value": ""
           }
-        ]
+        ],
+        "intent": "provide_reports"
       },
       {
-        "text": "What is the price of an 829 router?",
-        "intent": "order_product",
+        "text": "I want to get CCB pending approval recs report",
         "entities": [
           {
-            "entity": "router",
-            "end": 27,
-            "start": 24,
-            "value": "829"
-          },
-          {
-            "entity": "product",
-            "end": 34,
-            "start": 28,
-            "value": "router"
+            "entity": "pending reports",
+            "start": 18,
+            "end": 46,
+            "value": ""
           }
-        ]
+        ],
+        "intent": "provide_reports"
       },
       {
         "text": "have a good day",
@@ -163,80 +132,9 @@
       {
         "text": "take care",
         "intent": "goodbye"
-      },
-      {
-        "text": "Can I order a router?",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "product",
-            "end": 20,
-            "start": 14,
-            "value": "router"
-          }
-        ]
-      },
-      {
-        "text": "Can I order an 829 router?",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "router",
-            "end": 18,
-            "start": 15,
-            "value": "829"
-          },
-          {
-            "entity": "product",
-            "end": 25,
-            "start": 19,
-            "value": "router"
-          }
-        ]
-      },
-      {
-        "text": "I would like to order a router",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "product",
-            "end": 30,
-            "start": 24,
-            "value": "router"
-          }
-        ]
-      },
-      {
-        "text": "I would like to order an 829 router",
-        "intent": "order_product",
-        "entities": [
-          {
-            "entity": "router",
-            "end": 28,
-            "start": 25,
-            "value": "829"
-          },
-          {
-            "entity": "product",
-            "end": 35,
-            "start": 29,
-            "value": "router"
-          }
-        ]
-      },
-      {
-        "text": "I want to order a product",
-        "intent": "order_product"
-      },
-      {
-        "text": "Can I order a product",
-        "intent": "order_product"
-      },
-      {
-        "text": "How can I order a product",
-        "intent": "order_product"
       }
     ],
+    "regex_features": [],
     "entity_synonyms": []
   }
 }

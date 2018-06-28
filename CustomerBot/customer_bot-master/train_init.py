@@ -15,8 +15,8 @@ from rasa_core.policies.memoization import MemoizationPolicy
 if __name__ == '__main__':
 	logging.basicConfig(level='INFO')
 
-	training_data_file = 'C:/Murali/Testing/hackathon2018/customer_bot-master/data/stories.md'
-	model_path = 'C:/Murali/Testing/hackathon2018/customer_bot-master/models/dialogue'
+	model_path = 'C:/Srikanth/2018-Hackathon/git/myHR/CustomerBot/customer_bot-master/models/dialogue/',
+	training_data_file = 'C:/Srikanth/2018-Hackathon/git/myHR/CustomerBot/customer_bot-master/data/stories.md'
 
 	agent = Agent('customer_domain.yml', policies = [MemoizationPolicy(), KerasPolicy()])
 
