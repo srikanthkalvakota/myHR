@@ -10,7 +10,7 @@ from tts import speak
 speech_flag = True
 
 
-def send_email(candid):
+def send_email(candid, attach_photo_flag):
     attachment = './captured_images/candidate_{0}.jpg'.format(candid)
 
     toemail = 'exitir@gmail.com'
@@ -31,6 +31,7 @@ def send_email(candid):
     img = MIMEImage(fp.read())
     fp.close()
     img.add_header('Content-ID', '<{}>'.format(attachment))
+
     msg.attach(img)
 
     # Gmail Sign In
