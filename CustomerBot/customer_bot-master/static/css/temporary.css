@@ -1,5 +1,5 @@
 .chat_window{
-	margin-left: 50%;
+	margin-left: 10%;
 	height: calc(100vh - 120px);
 }
 .messages{
