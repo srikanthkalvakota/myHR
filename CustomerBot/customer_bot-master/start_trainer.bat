@@ -1,0 +1,1 @@
+python -m rasa_nlu.train -c data/data.json -d "C:/Srikanth/2018-Hackathon/git/myHR/CustomerBot/customer_bot-master/data"

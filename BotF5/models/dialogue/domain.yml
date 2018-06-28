@@ -1,0 +1,85 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_goodbye
+- utter_affirm
+- utter_specify_month
+- utter_approve_recid
+- utter_provide_reports
+- action_provide_report
+- action_approve_rec
+- action_InBMOApprove_Recs
+actions:
+- utter_greet
+- utter_goodbye
+- utter_affirm
+- utter_specify_month
+- utter_approve_recid
+- utter_provide_reports
+- actions.ActionProvideReport
+- actions.ActionApproveRec
+- actions.ActionInBMOApproveRecs
+config:
+  store_entities_as_slots: true
+entities:
+- lob
+- report
+- recs
+- month
+- open recs
+- pending
+- approval
+- pending reports
+- closed reports
+- Open
+- Closed
+- InBMOApproval
+- InCIOApproval
+- Approved
+- OfferInProgress
+- OfferAccepted
+- Joined
+- CCB
+- CIB
+- OPT
+- AWM
+- TSS
+- HLT
+- CBA
+intents:
+- greet
+- goodbye
+- provide_reports
+- provide_month
+- approve_rec
+- null
+slots:
+  lob:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  recs:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  report:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_affirm:
+  - text: 'Yes'
+  - text: Thats right
+  - text: You are correct
+  utter_approve_recid:
+  - text: Request for approval is done!
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye
+  - text: 'see you later '
+  utter_greet:
+  - text: Hello! Myself Bot F5. How can I help you?
+  - text: Hi
+  - text: Welcome! Myself VIDUR. Here to assist you?
+  utter_provide_reports:
+  - text: Please input month eg:- Jun 2018?
+  utter_specify_month:
+  - text: Please specify the month eg:- Jun 2018
+topics: []

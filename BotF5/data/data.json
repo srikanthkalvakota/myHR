@@ -1,0 +1,192 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "need report for the month of",
+        "intent": "provide_month",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "month",
+            "entity": "month"
+          }
+        ]
+      },
+      {
+        "text": "I want to get req report",
+        "intent": "provide_reports",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "recs",
+            "entity": "report"
+          }
+        ]
+      },
+      {
+        "text": "I want to approve rec id",
+        "intent": "approve_rec",
+        "entities": [
+          {
+            "start": 10,
+            "end": 24,
+            "value": "",
+            "entity": "approval"
+          }
+        ]
+      },
+      {
+        "text": "yes",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yep",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "end",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+       {
+        "text": "I want to get CCB closed recs report",
+        "intent": "provide_reports",
+        "entities": [
+          {
+            "start": 18,
+            "end": 36,
+            "value": "",
+            "entity": "closed reports"
+          }
+        ]
+      },
+	  {
+        "text": "I want to get CIB pending approval recs report",
+        "intent": "provide_reports",
+        "entities": [
+          {
+            "start": 18,
+            "end": 46,
+            "value": "",
+            "entity": "pending reports"
+          }
+        ]
+      },
+	  {
+        "text": "I want to get In BMO Approval recs report",
+        "intent": "provide_reports",
+        "entities": [
+          {
+            "start": 14,
+            "end": 42,
+            "value": "InBMOApproval",
+            "entity": "InBMOApproval"
+          }
+        ]
+      },
+	  {
+        "text": "I want to get CIB recs report",
+        "intent": "provide_reports",
+        "entities": [
+          {
+            "start": 15,
+            "end": 29,
+            "value": "CIB",
+            "entity": "CIB"
+          }
+        ]
+      },
+	  {
+        "text": "I want to get CCB recs report",
+        "intent": "provide_reports",
+        "entities": [
+          {
+            "start": 15,
+            "end": 29,
+            "value": "CCB",
+            "entity": "CCB"
+          }
+        ]
+      },
+      {
+        "text": "have a good day",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "take care",
+        "intent": "goodbye",
+        "entities": []
+      }
+    ]
+  }
+}

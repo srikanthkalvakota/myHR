@@ -1,0 +1,114 @@
+slots:
+  lob:
+    type: text
+  report:
+    type: text
+  reqno:
+    type: text
+  month:
+    type: text
+  candidateid:
+    type: text
+  skill:
+    type: text
+  cname:
+    type: text
+  cinterviewdate:
+    type: date
+  cinterviewtime:
+    type: time
+ 
+
+  utter_ask_lob:
+   - 'Provide LOB for which you want information'
+  utter_ask_reports:
+   - 'Are you looking for report?'
+   - 'Are you looking for summary report?'
+  utter_ask_recno:
+    - 'Please provide recno: eg- JB2018039'
+  utter_ask_month:
+    - 'Please provide month for which you need the report, if you neede everything type ALL'
+    - 'Which month do you need report for?'
+  utter_ask_candidateid:
+    - 'Please provide candidateID: eg- PFl2018001'
+  utter_ask_skill:
+    - 'Please provide skill you have: eg- java'
+  utter_ask_cname:
+    - 'Please provide cname you have: eg- FirstName'
+  utter_ask_cinterviewdate:
+    - 'Please provide cinterviewdate you have: eg- yyyyMMdd'
+  utter_ask_cinterviewdate:
+    - 'Please provide cinterviewdate you have: eg- yyyyMMdd'
+  
+
+
+intents:
+ - greet
+ - goodbye
+ - provide_reports
+ - provide_month
+ - approve_rec
+ - 
+
+
+entities:
+ - lob
+ - report
+ - recs
+ - month
+ - open recs
+ - pending 
+ - approval
+ - pending reports
+ - closed reports
+ - Open
+ - Closed
+ - InBMOApproval
+ - InCIOApproval
+ - Approved
+ - OfferInProgress
+ - OfferAccepted
+ - Joined
+ - CCB
+ - CIB
+ - OPT
+ - AWM
+ - TSS
+ - HLT
+ - CBA
+
+templates:
+  utter_greet:
+    - 'Hello! I am Chatur. How can I help you?'
+    - 'Hi'
+    - 'Welcome! My name is CHATUR. Here to assist you?'
+
+  utter_goodbye:
+    - 'Talk to you later.'
+    - 'Bye'
+    - 'see you later '
+  utter_affirm:
+    - 'Yes'
+    - 'Thats right'
+    - 'You are correct'
+  utter_provide_reports:
+    - 'Do you want to get req summary'
+  #utter_provide_month:
+   #- 'Which month?'
+  utter_approve_recid:
+    - 'Request for approval is done!'
+  utter_ask_month:
+    - 'Please provide month for which you need the report, if you neede everything type ALL'
+    - 'Which month do you need report for?'
+    
+
+actions:
+ - utter_greet
+ - utter_goodbye
+ - utter_affirm
+ - utter_specify_month
+ - utter_approve_recid
+ - utter_provide_reports
+ - actions.ActionProvideReport
+ - actions.ActionApproveRec
+ - actions.ActionInBMOApproveRecs

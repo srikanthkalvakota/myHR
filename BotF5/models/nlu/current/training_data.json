@@ -1,0 +1,140 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet"
+      },
+      {
+        "text": "howdy",
+        "intent": "greet"
+      },
+      {
+        "text": "hey there",
+        "intent": "greet"
+      },
+      {
+        "text": "hello",
+        "intent": "greet"
+      },
+      {
+        "text": "hi",
+        "intent": "greet"
+      },
+      {
+        "text": "need report for the month of",
+        "entities": [
+          {
+            "entity": "month",
+            "start": 20,
+            "end": 28,
+            "value": "month"
+          }
+        ],
+        "intent": "provide_month"
+      },
+      {
+        "text": "I want to get CCB open recs report",
+        "entities": [
+          {
+            "entity": "report",
+            "start": 23,
+            "end": 27,
+            "value": "recs"
+          }
+        ],
+        "intent": "provide_reports"
+      },
+      {
+        "text": "I want to approve rec id",
+        "entities": [
+          {
+            "entity": "approval",
+            "start": 10,
+            "end": 24,
+            "value": ""
+          }
+        ],
+        "intent": "approve_rec"
+      },
+      {
+        "text": "yes",
+        "intent": "affirm"
+      },
+      {
+        "text": "yep",
+        "intent": "affirm"
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm"
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "good bye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye"
+      },
+      {
+        "text": "end",
+        "intent": "goodbye"
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm"
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm"
+      },
+      {
+        "text": "ok",
+        "intent": "affirm"
+      },
+      {
+        "text": "great",
+        "intent": "affirm"
+      },
+      {
+        "text": "I want to get CCB closed recs report",
+        "entities": [
+          {
+            "entity": "closed reports",
+            "start": 18,
+            "end": 36,
+            "value": ""
+          }
+        ],
+        "intent": "provide_reports"
+      },
+      {
+        "text": "I want to get CCB pending approval recs report",
+        "entities": [
+          {
+            "entity": "pending reports",
+            "start": 18,
+            "end": 46,
+            "value": ""
+          }
+        ],
+        "intent": "provide_reports"
+      },
+      {
+        "text": "have a good day",
+        "intent": "goodbye"
+      },
+      {
+        "text": "take care",
+        "intent": "goodbye"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}
