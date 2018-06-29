@@ -18,21 +18,24 @@ def send_email(candid, attach_photo_flag):
     msg = MIMEMultipart()
     # msg["To"] = 'exitir@gmail.com'
     # msg["From"] = 'mybotf5@gmail.com'
-    msg["Subject"] = 'Candidate has arrived for interview.'
-    body = "Below candiate : {0} has arrived for interview <hr>".format(candid)
+    msg["Subject"] = 'Candidate {0} has arrived for interview.'.format(candid)
+    body = "dummy"
 
-    msgText = MIMEText('<b>%s</b><br><img src="cid:%s"><br>' %
-                       (body, attachment), 'html')
-    msg.attach(msgText)   # Added, and edited the previous line
+    if attach_photo_flag:
+        body = "Hi Recruitment Team,<br><br>Please be informed that below candiate : {0} has arrived for interview.<br><br>Thanks & Regards,<br>FrontDesk ChatBot. <hr>".format(candid)
+        msgText = MIMEText('<b>%s</b><br><img src="cid:%s"><br>' %
+                        (body, attachment), 'html')
+        msg.attach(msgText)   # Added, and edited the previous line
+        fp = open(attachment, 'rb')
+        img = MIMEImage(fp.read())
+        fp.close()
+        img.add_header('Content-ID', '<{}>'.format(attachment))
+        msg.attach(img)
+    else:
+        body = "Hi Recruitment Team,<br><br>Please be informed that the candiate : {0} has arrived for interview.<br><br>Thanks & Regards,<br>FrontDesk ChatBot.".format(candid)
+        msgText = MIMEText('<b>%s</b><br>' % (body), 'html')
+        msg.attach(msgText)   # Added, and edited the previous line
 
-    # print(msg)
-
-    fp = open(attachment, 'rb')
-    img = MIMEImage(fp.read())
-    fp.close()
-    img.add_header('Content-ID', '<{}>'.format(attachment))
-
-    msg.attach(img)
 
     # Gmail Sign In
     gmail_sender = 'mybotf5@gmail.com'
