@@ -20,7 +20,7 @@ def front_response(user_message):
         speak("Are you a new candidate, or returning candidate and want to know previous interview feedback ? type (new/returned)", speech_flag)
         return "Are you a new candidate or returning candidate and want to know previous interview feedback ? type (new/returned)?"
     elif new_returning_candidate_test(user_message) in ["n","r"]:
-        speak("Please provide your candidate Id (in format e.g. JPM12345), you can find your Candidate Id in the interview invitation email sent by our recruitment team.", speech_flag)
+        speak("Please provide your candidate Id, (in format e.g. JPM12345), you can find your Candidate Id in the interview invitation email sent by our recruitment team.", speech_flag)
         return "Please provide your candidate Id (in format e.g. JPM12345):"
     elif new_returning_candidate_test(user_message)=="r":
         speak("Please wait... while I fetch your interview feedback..", speech_flag)
@@ -34,7 +34,7 @@ def front_response(user_message):
             return "I am sending email to recruitment team to inform about your arrival, are you ok if I attach your photo? type (y/n)"
         else:
             speak("Please wait... while I fetch your interview feedback..", speech_flag)
-            speak("Your interview was conducted by Mr. Alice White, you have cleared the interview, please wait for your next round, recruitment team will call your name. Thankyou!", speech_flag)
+            speak("Your interview was conducted by Mr. Alice White, you have cleared the interview, please wait for your next round, recruitment team will call your name. If you need any help or assistance, then feel free to reach out to any of our recruitment team members. Thankyou!", speech_flag)
             return "Your interview was conducted by Mr. Alice White, you have cleared the interview, please wait for your next round, recruitment team will call your name. <br>Thankyou!"
     elif yes_test(user_message) == "y":
         y_res = user_message
@@ -42,13 +42,13 @@ def front_response(user_message):
         capture_image(candid)
         speak("Please wait while I send email to the recruitment team.......", speech_flag)
         send_email(candid, True)
-        speak("Recruitment team has been informed about your arrival. Your interview will start in about 20 minutes. Please be seated in the waiting area, recruitment team will call your name. Thankyou!", speech_flag)
+        speak("Recruitment team has been informed about your arrival. Your interview will start in about 20 minutes. Please be seated in the waiting area, recruitment team will call your name. If you need any help or assistance, then feel free to reach out to any of our recruitment team members. Thankyou!", speech_flag)
         return "Recruitment team has been informed about your arrival.<br>Your interview will start in about 20 minutes.<br>Please be seated in the waiting area, recruitment team will call your name. <br>Thankyou!"
     elif yes_test(user_message) == "n":
         speak('No Problem, I have not captured your photo.', speech_flag)
         speak("Please wait while I send email to the recruitment team.......", speech_flag)
         send_email(candid, False)
-        speak("Recruitment team has been informed about your arrival. Your interview will start in about 20 minutes. Please be seated in the waiting area, recruitment team will call your name. Thankyou!", speech_flag)
+        speak("Recruitment team has been informed about your arrival. Your interview will start in about 20 minutes. Please be seated in the waiting area, recruitment team will call your name. If you need any help or assistance, then feel free to reach out to any of our recruitment team members. Thankyou!", speech_flag)
         return "Recruitment team has been informed about your arrival.<br>Your interview will start in about 20 minutes.<br>Please be seated in the waiting area, recruitment team will call your name.<br>Thankyou!"
     else:
         speak("Sorry, I am not trained for this input...", speech_flag)
